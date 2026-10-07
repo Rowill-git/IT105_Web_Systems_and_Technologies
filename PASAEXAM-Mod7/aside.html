@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        .container {
+            display: flex;
+            max-width: 1020px;
+            margin: 0 auto; /* Centers the layout on the screen */
+            width: 100%;
+        }
+
+        main {
+            flex: 0 0 70%; /* Takes up exactly 70% width */
+            background-color: #f0f0f0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        aside {
+            flex: 0 0 30%; /* Takes up exactly 30% width */
+            background-color: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            main, aside {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <main>
+            <h1>Main Content (70% / 720px)</h1>
+            <p>This is your main content area.</p>
+        </main>
+        
+        <aside>
+            <h2>Aside (30% / 300px)</h2>
+            <p>This is your sidebar area.</p>
+        </aside>
+    </div>
+
+</body>
+</html>

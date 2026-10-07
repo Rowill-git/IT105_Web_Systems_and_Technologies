@@ -1,0 +1,206 @@
+/* CSS RESET! */
+* { border: 0; margin: 0; padding: 0; font-family: Helvetica, sans-serif, Arial; }
+body { background-color: rgb(222, 217, 217);}
+
+.wrapper {
+    max-width: 1020px;
+    width: 80%;
+    padding: 12px;
+    border: 2px solid black;
+    margin: 12px auto;
+    background-color: lightgray;
+}
+
+/* Number 1. Header */
+.heading {
+    height: 56px;
+    border: 2px dashed black;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    border: 1px dashed #333333; 
+    padding: 6px; 
+    background-color: rgb(195, 195, 195);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+nav a { text-decoration: none;}
+
+/* Number 2. Page Title */
+.page-title {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    border: 2px dashed black;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 12px;
+    background-color: rgb(195, 195, 195);
+}
+
+/* Number 3. Main Column */
+.contain-col-asi {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    gap: 20px;
+}
+
+main {
+    flex: 1 1 70%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.main-column {
+    border: 2px dashed black;
+    padding: 16px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.featured-image {
+    height: 175px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed black;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+.featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+.post-title-etc h2 {
+    border: 1px dashed black;
+    background-color: rgb(195, 195, 195);
+    text-align: center;
+    width: 60%;
+    padding: 6px;
+}
+.post-title-etc p {
+    line-height: 1.25;
+}
+
+#meta-line {
+    display: block;                  
+    color: #6b7280;            
+    opacity: 0.8;                
+    margin: 6px 0px;       
+}
+
+.read-more-btn {
+    text-align: center;
+    width: fit-content;
+    border: 1px dashed black;
+    padding: 4px;
+    margin-top: 6px;
+    background-color: rgb(240, 240, 240);
+}
+.read-more-btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+/* Number 4. Sidebar */
+aside {
+    flex: 1 1 30%;
+    border: 2px dashed black;
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.search {
+    border: 2px dashed black;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    padding: 6px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+.search input[type="search"] {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.recent-posts h3 {
+    margin-bottom: 6px;
+}
+
+.square-icon {
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+    border: 1px dashed black;
+    background-color: rgb(184, 184, 184);
+}
+
+.post { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.Categories h3 { margin: 6px 0; }
+.categorlist { display: flex;
+    flex-direction: column; 
+    row-gap: 6px; }
+
+/* Number 5. Footer */
+.footers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+.footer {
+    border: 2px dashed black;
+    background-color: rgb(195, 195, 195);
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Extra Credit - media query */
+    @media (max-width: 767px) {
+        .contain-col-asi {
+            flex-direction: column;
+        }
+        .footers {
+            flex-direction: column;
+        }
+
+        main,
+        aside {
+            flex: 1 1 100%;
+        }
+    }
